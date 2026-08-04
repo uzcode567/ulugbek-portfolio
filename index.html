@@ -1,235 +1,262 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Ulugbek Umarov — cybersecurity student, educator, and founder of SAT Forge." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Ulugbek Umarov — cybersecurity student, IELTS educator, and founder of SAT Forge.">
+  <meta name="theme-color" content="#f2efe7">
   <title>Ulugbek Umarov — Portfolio</title>
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
+  <div class="page-noise" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Ulugbek Umarov home">
+  <div class="cursor" aria-hidden="true">
+    <span class="cursor-dot"></span>
+    <span class="cursor-ring"><span class="cursor-label"></span></span>
+  </div>
+
+  <header class="site-header shell">
+    <a class="brand interactive" href="#top" data-cursor="TOP" aria-label="Go to top">
       <span class="brand-mark">UU</span>
-      <span class="brand-copy">Ulugbek<br>Umarov</span>
+      <span class="brand-name">Ulugbek<br>Umarov</span>
     </a>
 
-    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span>
+    <button class="menu-button interactive" type="button" aria-label="Open navigation" aria-expanded="false" data-cursor="MENU">
+      <span></span>
+      <span></span>
     </button>
 
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+      <a class="interactive" href="#about" data-cursor="GO">About</a>
+      <a class="interactive" href="#work" data-cursor="VIEW">Work</a>
+      <a class="interactive" href="#experience" data-cursor="READ">Experience</a>
+      <a class="interactive" href="#contact" data-cursor="HELLO">Contact</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero section-shell">
-      <div class="hero-kicker reveal">
-        <span class="status-dot"></span>
+    <section class="hero shell">
+      <p class="eyebrow reveal">
+        <span class="live-dot" aria-hidden="true"></span>
         Cybersecurity student · Educator · Builder
-      </div>
+      </p>
 
-      <div class="hero-grid">
+      <div class="hero-layout">
         <div class="hero-copy">
-          <h1 class="reveal">
-            I turn learning
-            <span class="outline-word">into tools</span>
-            people can use.
-          </h1>
-          <p class="hero-summary reveal">
-            I’m Ulugbek Umarov, a cybersecurity student from Uzbekistan with experience teaching IELTS and building digital education products.
+          <h1 class="reveal">I make difficult ideas <span>useful.</span></h1>
+          <p class="hero-intro reveal">
+            I’m Ulugbek Umarov from Uzbekistan. I combine education, web development, and cybersecurity to build practical tools for learners.
           </p>
           <div class="hero-actions reveal">
-            <a class="button button-primary" href="#work">Explore my work</a>
-            <a class="button button-ghost" href="https://t.me/sat_forge" target="_blank" rel="noreferrer">Message on Telegram ↗</a>
+            <a class="button button-primary interactive magnetic" href="#work" data-cursor="VIEW">Explore my work</a>
+            <a class="button button-secondary interactive magnetic" href="https://t.me/sat_forge" target="_blank" rel="noreferrer" data-cursor="OPEN">Telegram ↗</a>
           </div>
         </div>
 
-        <aside class="hero-board reveal" aria-label="Key achievements">
-          <div class="board-heading">
+        <aside class="score-card reveal" aria-label="Profile highlights">
+          <div class="score-card-top">
             <span>Profile snapshot</span>
-            <span>2026</span>
+            <span>UZ · 2026</span>
           </div>
-          <div class="metric metric-large">
-            <span class="metric-label">SAT score</span>
+
+          <div class="score-primary">
+            <span>SAT score</span>
             <strong data-count="1380">1380</strong>
-            <span class="metric-note">College readiness</span>
+            <small>790 Math</small>
           </div>
-          <div class="metric-row">
-            <div class="metric">
-              <span class="metric-label">IELTS</span>
+
+          <div class="score-pair">
+            <div>
+              <span>IELTS</span>
               <strong data-count="7.0">7.0</strong>
-              <span class="metric-note">Overall band</span>
+              <small>Overall band</small>
             </div>
-            <div class="metric">
-              <span class="metric-label">Role</span>
-              <strong class="metric-word">Founder</strong>
-              <span class="metric-note">SAT Forge</span>
+            <div>
+              <span>Building</span>
+              <strong class="word-score">SAT<br>Forge</strong>
+              <small>Founder</small>
             </div>
-          </div>
-          <div class="board-footer">
-            <span>Based in Bukhara, Uzbekistan</span>
-            <span>GMT+5</span>
           </div>
         </aside>
       </div>
 
-      <div class="ticker" aria-label="Areas of focus">
-        <div class="ticker-track">
-          <span>CYBERSECURITY</span><span>EDUCATION</span><span>WEB DEVELOPMENT</span><span>DIGITAL SAT</span><span>COMMUNITY</span>
-          <span>CYBERSECURITY</span><span>EDUCATION</span><span>WEB DEVELOPMENT</span><span>DIGITAL SAT</span><span>COMMUNITY</span>
+      <div class="marquee" aria-label="Main areas of interest">
+        <div class="marquee-track">
+          <span>CYBERSECURITY ✦</span><span>EDUCATION ✦</span><span>DIGITAL SAT ✦</span><span>WEB DEVELOPMENT ✦</span><span>COMMUNITY ✦</span>
+          <span>CYBERSECURITY ✦</span><span>EDUCATION ✦</span><span>DIGITAL SAT ✦</span><span>WEB DEVELOPMENT ✦</span><span>COMMUNITY ✦</span>
         </div>
       </div>
     </section>
 
-    <section class="about section-shell" id="about">
-      <div class="section-label reveal">01 / About</div>
-      <div class="about-grid">
-        <h2 class="section-title reveal">Not just scores.<br>A record of building.</h2>
-        <div class="about-copy reveal">
-          <p>
-            I enjoy taking difficult material and making it clear, practical, and accessible. That mindset connects my work in education, web development, and cybersecurity.
-          </p>
-          <p>
-            My teaching experience helped me understand how students learn. SAT Forge grew from the same idea: students need focused practice, useful feedback, and a clean environment that keeps them moving forward.
-          </p>
+    <section class="section shell" id="about">
+      <div class="section-head reveal">
+        <span>01 / About</span>
+        <span>Who I am</span>
+      </div>
+
+      <div class="about-layout">
+        <h2 class="display-title reveal">Scores opened doors.<br>Building gave me direction.</h2>
+        <div class="about-text reveal">
+          <p>I enjoy taking complex material and turning it into something clear, practical, and usable. That mindset connects my teaching experience with my interest in technology.</p>
+          <p>Teaching IELTS showed me how learners struggle and improve. SAT Forge grew from that same observation: focused practice works best when the experience is simple, structured, and motivating.</p>
         </div>
       </div>
 
-      <div class="principles-grid">
-        <article class="principle reveal">
+      <div class="principles">
+        <article class="principle reveal interactive" data-cursor="01">
           <span>01</span>
-          <h3>Build for real users</h3>
-          <p>I prefer useful, working products over ideas that remain unfinished.</p>
+          <h3>Build for real people</h3>
+          <p>I value useful working products more than impressive ideas that remain unfinished.</p>
         </article>
-        <article class="principle reveal">
+        <article class="principle reveal interactive" data-cursor="02">
           <span>02</span>
-          <h3>Explain clearly</h3>
-          <p>Teaching trained me to remove unnecessary complexity without losing accuracy.</p>
+          <h3>Explain with clarity</h3>
+          <p>Good teaching removes needless complexity without removing accuracy.</p>
         </article>
-        <article class="principle reveal">
+        <article class="principle reveal interactive" data-cursor="03">
           <span>03</span>
-          <h3>Keep improving</h3>
-          <p>I learn through projects, feedback, experiments, and repeated refinement.</p>
+          <h3>Improve through feedback</h3>
+          <p>I learn by building, testing, listening, fixing, and repeating the process.</p>
         </article>
       </div>
     </section>
 
-    <section class="work section-shell" id="work">
-      <div class="section-label reveal">02 / Featured work</div>
+    <section class="section shell" id="work">
+      <div class="section-head reveal">
+        <span>02 / Featured work</span>
+        <span>Selected project</span>
+      </div>
 
-      <article class="project-feature reveal">
-        <div class="project-index">PROJECT 001</div>
-        <div class="project-main">
-          <div class="project-heading">
-            <p class="project-type">Education platform</p>
-            <h2>SAT Forge</h2>
-          </div>
+      <article class="project-card reveal">
+        <div class="project-content">
+          <p class="project-kicker">Education platform · Project 001</p>
+          <h2>SAT<br><span>FORGE</span></h2>
           <p class="project-description">
             A focused Digital SAT practice platform designed to make full-length adaptive preparation cleaner, easier to navigate, and more useful for students.
           </p>
-          <div class="project-tags">
-            <span>Digital SAT</span>
-            <span>Product design</span>
-            <span>Web development</span>
-            <span>Student tools</span>
-          </div>
-          <div class="project-links">
-            <a href="https://sat-forge.cc" target="_blank" rel="noreferrer">Visit SAT Forge ↗</a>
-            <a href="https://t.me/sat_forge" target="_blank" rel="noreferrer">Join the channel ↗</a>
+
+          <ul class="project-tags" aria-label="Project categories">
+            <li>Digital SAT</li>
+            <li>Product design</li>
+            <li>Web development</li>
+            <li>Student tools</li>
+          </ul>
+
+          <div class="project-actions">
+            <a class="project-link interactive magnetic" href="https://sat-forge.cc" target="_blank" rel="noreferrer" data-cursor="OPEN">Visit website ↗</a>
+            <a class="project-link interactive magnetic" href="https://t.me/sat_forge" target="_blank" rel="noreferrer" data-cursor="JOIN">Join channel ↗</a>
           </div>
         </div>
-        <div class="project-visual" aria-label="SAT Forge visual preview">
-          <div class="browser-frame">
-            <div class="browser-top"><i></i><i></i><i></i><span>sat-forge.cc</span></div>
-            <div class="browser-content">
-              <div class="forge-logo">SAT<span>FORGE</span></div>
-              <div class="mock-line long"></div>
-              <div class="mock-line medium"></div>
-              <div class="mock-cards">
-                <div><b>01</b><small>READING & WRITING</small></div>
-                <div><b>02</b><small>MATH</small></div>
+
+        <div class="project-visual" data-parallax>
+          <div class="visual-label">LIVE PROJECT / SAT-FORGE.CC</div>
+          <div class="browser-mockup interactive" data-cursor="OPEN">
+            <div class="browser-bar">
+              <div class="browser-dots"><i></i><i></i><i></i></div>
+              <span>sat-forge.cc</span>
+            </div>
+            <div class="browser-page">
+              <div class="forge-wordmark">SAT<span>FORGE</span></div>
+              <p>Full-length adaptive Digital SAT practice.</p>
+              <div class="browser-rule"></div>
+              <div class="module-grid">
+                <div><b>01</b><span>Reading & Writing</span></div>
+                <div><b>02</b><span>Math</span></div>
               </div>
-              <div class="mock-button">START PRACTICE →</div>
+              <div class="mock-cta">START PRACTICE →</div>
             </div>
           </div>
+          <span class="visual-number">001</span>
         </div>
       </article>
     </section>
 
-    <section class="experience section-shell" id="experience">
-      <div class="section-label reveal">03 / Experience</div>
-      <div class="experience-header">
-        <h2 class="section-title reveal">Education meets technology.</h2>
-        <p class="reveal">The common thread in my work is helping people learn, practice, and make progress.</p>
+    <section class="section shell" id="experience">
+      <div class="section-head reveal">
+        <span>03 / Experience</span>
+        <span>Education + technology</span>
+      </div>
+
+      <div class="experience-intro">
+        <h2 class="display-title reveal">A learner who also teaches and builds.</h2>
+        <p class="reveal">My work has one common goal: helping people understand, practice, and make visible progress.</p>
       </div>
 
       <div class="timeline">
-        <article class="timeline-item reveal">
-          <div class="timeline-date">Present</div>
-          <div class="timeline-content">
+        <article class="timeline-row reveal interactive" data-cursor="NOW">
+          <span class="timeline-date">Present</span>
+          <div>
             <h3>Founder · SAT Forge</h3>
-            <p>Building a Digital SAT practice platform and growing an online learning community through the @sat_forge Telegram channel.</p>
+            <p>Building a Digital SAT practice platform and growing a learning community through the @sat_forge Telegram channel.</p>
           </div>
-          <div class="timeline-tag">Product</div>
+          <span class="timeline-type">Product</span>
         </article>
-        <article class="timeline-item reveal">
-          <div class="timeline-date">Experience</div>
-          <div class="timeline-content">
-            <h3>IELTS Teaching</h3>
-            <p>Supported learners with English skills, exam strategy, clear explanations, and structured practice.</p>
+        <article class="timeline-row reveal interactive" data-cursor="TEACH">
+          <span class="timeline-date">Experience</span>
+          <div>
+            <h3>IELTS Teacher</h3>
+            <p>Helped learners improve English skills, exam strategy, and confidence through clear explanations and structured practice.</p>
           </div>
-          <div class="timeline-tag">Education</div>
+          <span class="timeline-type">Education</span>
         </article>
-        <article class="timeline-item reveal">
-          <div class="timeline-date">Current</div>
-          <div class="timeline-content">
-            <h3>Cybersecurity Studies</h3>
-            <p>Developing foundations in programming, systems, networking, security, and ethical problem-solving.</p>
+        <article class="timeline-row reveal interactive" data-cursor="LEARN">
+          <span class="timeline-date">Current</span>
+          <div>
+            <h3>Cybersecurity Student</h3>
+            <p>Developing foundations in programming, Linux, networking, web security, and ethical hacking.</p>
           </div>
-          <div class="timeline-tag">Learning</div>
+          <span class="timeline-type">Security</span>
         </article>
       </div>
     </section>
 
-    <section class="skills section-shell">
-      <div class="section-label reveal">04 / Capabilities</div>
+    <section class="section shell skills" id="skills">
+      <div class="section-head reveal">
+        <span>04 / Capabilities</span>
+        <span>What I bring</span>
+      </div>
+
       <div class="skills-layout">
-        <h2 class="section-title reveal">What I bring<br>to a project.</h2>
+        <h2 class="display-title reveal">Useful skills.<br>Still expanding.</h2>
         <div class="skill-list">
-          <div class="skill reveal"><span>01</span><h3>Teaching & communication</h3><p>Breaking complex concepts into direct, understandable steps.</p></div>
-          <div class="skill reveal"><span>02</span><h3>Product thinking</h3><p>Turning a learner’s problem into a useful digital experience.</p></div>
-          <div class="skill reveal"><span>03</span><h3>Web development</h3><p>Building and improving responsive websites and interactive tools.</p></div>
-          <div class="skill reveal"><span>04</span><h3>Cybersecurity foundations</h3><p>Learning systems, Linux, networking, defensive thinking, and ethical testing.</p></div>
+          <article class="skill-row reveal">
+            <span>01</span><h3>Education</h3><p>IELTS guidance, exam strategy, lesson planning, and learner-focused explanations.</p>
+          </article>
+          <article class="skill-row reveal">
+            <span>02</span><h3>Web</h3><p>HTML, CSS, JavaScript, responsive interfaces, and deployment workflows.</p>
+          </article>
+          <article class="skill-row reveal">
+            <span>03</span><h3>Cybersecurity</h3><p>Linux fundamentals, networking basics, CTF practice, and ethical security concepts.</p>
+          </article>
+          <article class="skill-row reveal">
+            <span>04</span><h3>Communication</h3><p>English, Uzbek, Russian, public speaking, and educational content creation.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="contact section-shell" id="contact">
+    <section class="section shell contact" id="contact">
       <div class="contact-card reveal">
-        <p class="contact-eyebrow">Have a useful idea?</p>
-        <h2>Let’s build something<br>that helps people learn.</h2>
+        <p>Have a project, idea, or useful opportunity?</p>
+        <h2>Let’s build something that helps people learn.</h2>
         <div class="contact-actions">
-          <a class="button button-light" href="https://t.me/sat_forge" target="_blank" rel="noreferrer">Contact on Telegram ↗</a>
-          <a class="text-link" href="https://sat-forge.cc" target="_blank" rel="noreferrer">sat-forge.cc ↗</a>
+          <a class="button button-light interactive magnetic" href="https://t.me/sat_forge" target="_blank" rel="noreferrer" data-cursor="CHAT">Contact on Telegram ↗</a>
+          <a class="contact-link interactive" href="https://sat-forge.cc" target="_blank" rel="noreferrer" data-cursor="OPEN">sat-forge.cc ↗</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer section-shell">
+  <footer class="footer shell">
     <span>© <span id="year"></span> Ulugbek Umarov</span>
-    <span>Designed with clarity. Built with curiosity.</span>
-    <a href="#top">Back to top ↑</a>
+    <span>Bukhara, Uzbekistan · GMT+5</span>
+    <a class="interactive" href="#top" data-cursor="TOP">Back to top ↑</a>
   </footer>
 
   <script src="script.js"></script>

@@ -1,18 +1,22 @@
 # Ulugbek Umarov Portfolio
 
-A responsive one-page portfolio built with plain HTML, CSS, and JavaScript.
+Responsive one-page portfolio made with plain HTML, CSS, and JavaScript.
+
+## Files
+
+- `index.html` — page structure and content
+- `styles.css` — complete responsive design
+- `script.js` — menu, reveal effects, magnetic links, parallax, and custom cursor
+- `favicon.svg` — browser icon
 
 ## Run locally
 
-Open `index.html` directly, or use VS Code Live Server.
+Open `index.html`, or use the VS Code **Live Server** extension.
 
-## Deploy
+## Deploy to GitHub Pages
 
-You can deploy the folder to GitHub Pages, Cloudflare Pages, Netlify, or Vercel.
+Upload all files to the root of the repository, then choose:
 
-## Important customizations
+**Settings → Pages → Deploy from a branch → main → /(root)**
 
-- Replace or add your personal email, GitHub, and LinkedIn links.
-- Add exact dates for your IELTS teaching experience.
-- Add more projects when they are ready.
-- Update the cybersecurity education wording with your exact university/program details.
+The featured-project layout uses explicit CSS grid areas and has been tested at desktop, tablet, and mobile widths.
