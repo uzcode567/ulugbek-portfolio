@@ -42,6 +42,41 @@
     revealItems.forEach((item) => item.classList.add('is-visible'));
   }
 
+  // Count up animation
+  const countElements = document.querySelectorAll('[data-count]');
+  if ('IntersectionObserver' in window && countElements.length > 0) {
+    const countObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const target = entry.target;
+        const targetValue = parseFloat(target.getAttribute('data-count'));
+        const isFloat = target.getAttribute('data-count').includes('.');
+        let current = 0;
+        const increment = targetValue / 40; // 40 steps
+
+        const updateCount = () => {
+          current += increment;
+          if (current < targetValue) {
+            target.textContent = isFloat ? current.toFixed(1) : Math.ceil(current);
+            requestAnimationFrame(updateCount);
+          } else {
+            target.textContent = isFloat ? targetValue.toFixed(1) : targetValue;
+          }
+        };
+
+        updateCount();
+        observer.unobserve(target);
+      });
+    }, { threshold: 0.5 });
+
+    countElements.forEach(el => {
+      el.textContent = '0'; // Initialize to 0
+      countObserver.observe(el);
+    });
+  }
+
+
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
@@ -123,4 +158,29 @@
       });
     }
   }
+
+  // Blob mouse tracking
+  const blob = document.querySelector('.blob-bg');
+  if (blob) {
+    let blobX = window.innerWidth / 2;
+    let blobY = window.innerHeight / 2;
+    let targetBlobX = window.innerWidth / 2;
+    let targetBlobY = window.innerHeight / 2;
+
+    window.addEventListener('pointermove', (e) => {
+      targetBlobX = e.clientX;
+      targetBlobY = e.clientY;
+    }, { passive: true });
+
+    const animateBlob = () => {
+      blobX += (targetBlobX - blobX) * 0.05;
+      blobY += (targetBlobY - blobY) * 0.05;
+      blob.style.setProperty('--blob-x', `${blobX}px`);
+      blob.style.setProperty('--blob-y', `${blobY}px`);
+      requestAnimationFrame(animateBlob);
+    };
+
+    animateBlob();
+  }
+
 })();
