@@ -37,6 +37,24 @@ img, svg { display: block; max-width: 100%; }
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.75'/%3E%3C/svg%3E");
 }
 
+.blob-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  background: radial-gradient(circle, rgba(202,255,61,0.15) 0%, rgba(202,255,61,0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%) translate3d(var(--blob-x, 50vw), var(--blob-y, 50vh), 0);
+  filter: blur(40px);
+  will-change: transform;
+}
+
+
 .shell {
   width: min(calc(100% - 56px), var(--shell));
   margin-inline: auto;
@@ -228,6 +246,12 @@ img, svg { display: block; max-width: 100%; }
   background: var(--blue);
   isolation: isolate;
 }
+
+.project-card + .project-card { margin-top: 64px; }
+.project-visual-ielts { background: var(--ink); }
+.project-card { transition: transform 200ms ease, box-shadow 200ms ease; }
+.project-card:hover { transform: translate(-4px, -4px); box-shadow: 12px 12px 0 var(--ink); }
+
 .project-visual::before {
   content: "";
   position: absolute;
